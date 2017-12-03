@@ -118,29 +118,29 @@ RUN set -e \
     && apk update \
     && apk upgrade \
     && apk add --no-cache \
-		ca-certificates \
-		openssl \
+        ca-certificates \
+        openssl \
         bash \
-		curl \
-		tar \
-		xz \
+        curl \
+        tar \
+        xz \
     && apk add --no-cache `cat /tmp/php-extensions` \
     && apk add --no-cache --virtual .build-deps \
-		autoconf \
-		coreutils \
-		curl-dev \
-		dpkg-dev dpkg \
-		file \
-		g++ \
-		gcc \
-		libc-dev \
-		libedit-dev \
-		libxml2-dev \
-		make \
-		openssl-dev \
-		pkgconf \
-		re2c \
-		sqlite-dev \
+        autoconf \
+        coreutils \
+        curl-dev \
+        dpkg-dev dpkg \
+        file \
+        g++ \
+        gcc \
+        libc-dev \
+        libedit-dev \
+        libxml2-dev \
+        make \
+        openssl-dev \
+        pkgconf \
+        re2c \
+        sqlite-dev \
         php7-dev
 
 #

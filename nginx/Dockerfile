@@ -16,7 +16,7 @@ RUN set -e \
     && apk update \
     && apk upgrade \
     && apk add --no-cache \
-		ca-certificates \
+        ca-certificates \
         bash \
     && addgroup -g 1000 www \
     && adduser -D -H -u 1000 -s /bin/bash -G www www 
