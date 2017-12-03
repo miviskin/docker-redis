@@ -116,6 +116,7 @@ RUN set -e \
     && addgroup -g 1000 www \
     && adduser -D -H -u 1000 -s /bin/bash -G www www \
     && apk update \
+    && apk upgrade \
     && apk add --no-cache \
 		ca-certificates \
 		openssl \
@@ -123,7 +124,7 @@ RUN set -e \
 		curl \
 		tar \
 		xz \
-    && apk add `cat /tmp/php-extensions` \
+    && apk add --no-cache `cat /tmp/php-extensions` \
     && apk add --no-cache --virtual .build-deps \
 		autoconf \
 		coreutils \
